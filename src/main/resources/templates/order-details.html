@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div th:include="fragments :: header"></div> <!--из файла fragments.html включи фрагмент с названием header -->
+<div class="content">
+    <form th:action="@{/order-delete}" method="post">
+        <span th:text="${order.id}"/> <!--th:text-атрибут спан   элементы=теги-->
+        <span th:each="meal : ${order.meals}">
+        <span th:text="${meal.name}"/>&nbsp</span>
+        <input type="hidden" th:value="${order.id}" name="orderId"/>
+        <input type="submit" value="отменить заказ"/>
+    </form>
+
+</div>
+</body>
+</html>
+

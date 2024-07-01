@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div th:include="fragments :: header"></div> <!--из файла fragments.html включи фрагмент с названием header -->
+<div class="content">
+  <form class="login-form" method="POST" th:action="@{/create-meal}">
+    <div>Название</div>
+    <input type="text" name="name" required="required">
+    <div>Состав</div>
+    <input type="text" name="compound" required="required">
+    <div>Цена</div>
+    <input type="text" name="price" required="required">
+    <input class="login-btn" type="submit" name="submit_btn" value="Создать блюдо">
+  </form>
+</div>
+</body>
+</html>

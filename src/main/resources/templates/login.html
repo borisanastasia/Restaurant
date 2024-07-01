@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div th:include="fragments :: header"></div> <!--из файла fragments.html включи фрагмент с названием header -->
+<div class="content">
+
+    <form class="login-form" th:action="@{/login}" method="post">
+        <div>Логин</div>
+        <input type="text" name="username" required="required">
+        <div>Пароль</div>
+        <input type="password" name="password" required="required">
+        <input class="login-btn" type="submit" name="submit_btn" value="Войти">
+
+    </form>
+</div>
+</body>
+</html>

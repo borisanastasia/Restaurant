@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div th:include="fragments :: header"></div>
+<div class="content">
+    <form th:action="@{/orders}" method="post" th:object="${orderRequest}">
+        <table>
+            <tr>
+                <td th:each="meal : ${meals}">
+                    <p class="title">
+                        <a th:href="@{/showMealById(id=${meal.id})}" th:text="${meal.name}"/>
+                        <input type="checkbox" th:value="${meal.id}" th:field="*{mealIds}"/>
+                        <select>
+                            <option selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </p>
+                    <b>состав:</b> <span th:text="${meal.compound}"/></option>
+                    <p> <b>цена:</b> <span th:text="${meal.price}"/> евро</p>
+                </td>
+            </tr>
+        </table>
+        <button>Заказать</button>
+    </form>
+</div>
+</body>
+</html>

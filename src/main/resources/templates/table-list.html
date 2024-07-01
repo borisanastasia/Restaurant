@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div th:include="fragments :: header"></div>
+<div class="content">
+    <table>
+        <tr th:each="table : ${tables}">
+            <td th:text="${table.id}"></td>
+            <td th:text="${table.name}"></td>
+            <td th:text="${table.totalSeats}"></td>
+        </tr>
+            </table>
+</div>
+
+
+</body>
+</html>

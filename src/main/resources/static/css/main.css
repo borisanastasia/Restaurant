@@ -1,0 +1,130 @@
+.header {
+    background-color: yellow;
+    height: 150px;
+    position: relative;
+}
+.header-name {
+    background-color: green;
+    text-align:center;
+    font-size: 40px;
+    margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+}
+.header-enter {
+      margin: 0;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+}
+
+.content table {
+    width: 100%;
+}
+.content td {
+    padding: 0 10px;
+}
+.content .title {
+    font-weight: bold;
+    font-size: 20px;
+}
+.content .title input {
+    float: right;
+}
+.content button {
+    margin-top: 20px;
+    padding: 20px;
+}
+.content-name1{
+    color:black;
+    font-weight:bold;
+    margin:0px 0px 10px;
+     font-size:1.2em;
+     position: absolute;
+      top: 200px;
+      left: 40px;
+}
+.content-price1{
+ position: absolute;
+      top: 45px;
+      left: 1px;
+
+}
+.content-name2{
+ font-size:1.2em;
+ position: absolute;
+      top: 300px;
+      left: 40px;
+    color:black;
+      font-weight:bold;
+                margin:0px 0px 10px;
+}
+.block{
+    background: pink;
+    height: 200px;
+    width:60%;
+    border:8px solid orange;
+    border-radius: 15px;
+    margin:20px;
+    padding:80px;
+
+}
+table {
+    border: 1px solid black;
+    table-layout: fixed;
+    width: 200px;
+}
+th,td {
+    border: 1px solid black;
+    width: 100px;
+    overflow: hidden;
+}
+.login-form{
+        margin-top: 100px;
+        height: 200px;
+        width: 200px;
+        left: 50%;
+        position: fixed;
+        margin-left: -100px;
+        color: blue;
+}
+.login-form input {
+    margin-bottom:10px;
+}
+
+.login-form2{
+        margin-top: 100px;
+        height: 200px;
+        width: 600px;
+        left: 50%;
+        position: fixed;
+        margin-left: -300px;
+        color: blue2;
+}
+
+.login-form2 input {
+    margin-bottom:10px;
+        width: 100%;
+}
+
+.login-btn {
+  appearance:none;
+  -webkit-appearance:none;
+  padding:10px;
+  border:none;
+  background-color:#3F51B5;
+  color:#fff;
+  font-weight:600;
+  border-radius:5px;
+  width:85%;
+  margin-top: 7px;
+}
+.link-order{
+    margin-right:50px;
+}
+.link-order2{
+ margin-right:40px;
+}

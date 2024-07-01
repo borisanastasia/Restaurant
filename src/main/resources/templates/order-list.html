@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div th:include="fragments :: header"></div>
+<div class="content">
+    <table>
+
+        <tr th:each="order : ${orders}">
+            <form method="post" th:action="@{/update-order}">
+                <td><a th:href="@{/order-details(id=${order.id})}" th:text="${order.id}"/></td>
+                <input type="hidden" th:value="${order.id}" name="updateOrderId"/>
+                <td th:text="${order.meals}"></td>
+                <td>
+                    <select name="tableId">
+                        <option th:each="table : ${tables}" th:text="${table.name}" th:value="${table.id}" th:selected="${table.id == order.table.id}"></option>
+                    </select>
+                </td>
+                <td><input type="submit" value="Обновить Заказ"/></td>
+            </form>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
+
+

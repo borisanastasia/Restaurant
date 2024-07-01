@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div th:include="fragments :: header"></div> <!--из файла fragments.html включи фрагмент с названием header -->
+<div class="content">
+    <span th:text="${meal.name}"/> <!--th:text-атрибут спан   элементы=теги-->
+</div>
+<form class="login-form2" method="POST" th:action="@{/update-meal}">
+    <div>Название</div>
+    <input type="text" name="name" th:value="${meal.name}" required>
+    <div>Состав</div>
+   <input type="text" name="compound" th:value="${meal.compound}" required/>
+    <div>Цена</div>
+    <input type="text" name="price" th:value="${meal.price}" required>
+
+    <input type="hidden" th:value="${meal.id}" name="updateMealId"/>
+    <input class="login-btn" type="submit" name="submit_btn" value="Редактировать блюдо">
+</form>
+</body>
+</html>
+
+

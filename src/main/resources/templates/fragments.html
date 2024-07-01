@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<body>
+<div th:fragment="header">
+    <div class="header">
+        <div class="header-name">My Super Restaurant</div>
+        <div class="header-enter">
+            <a th:href="@{/menu}" class="link-order">Меню</a>
+            <a th:href="@{/add-meal}" class="link-order">Добавить продукт</a>
+            <a th:href="@{/table-list}" class="link-order">Столы</a>
+            <a th:href="@{/order-list}" class="link-order">Заказы</a>
+            <a sec:authorize="!isAuthenticated()" th:href="@{/login}" class="link-order">Login</a>
+            <a sec:authorize="isAuthenticated()" th:href="@{/logout}" class="link-order2">Logout</a>
+        </div>
+
+
+    </div>
+</div>
+</body>
+
+</html>
